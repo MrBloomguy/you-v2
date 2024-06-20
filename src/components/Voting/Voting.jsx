@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Voting.module.css";
-import VotingElement from "./votingElement";
+import VotingElement from "./VotingElement";
 function Voting() {
   const votingStatics = [
     {
