@@ -1,0 +1,7 @@
+.divide__Cont {
+  display: grid;
+  grid-template-columns: 571px 256px;
+  column-gap: 80px;
+  width: fit-content;
+  margin: 15px auto;
+}
