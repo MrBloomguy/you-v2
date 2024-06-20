@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #0f1222;
+  --secondary-color: #fff;
+  --third-color: #f3f6fb;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.main__Wrapper {
+  display: grid;
+  grid-template-columns: 288px 1fr;
+}
+
+main {
+  width: 1064px;
+  margin: 0 auto;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+img {
+  object-fit: cover;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+input {
+  border: none;
+  outline: none;
+}
