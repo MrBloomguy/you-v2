@@ -5,8 +5,16 @@ function Header() {
   return (
     <header className={styles.header__cont}>
       <div className={styles.input__cont}>
-        <input type="text" placeholder="Search for projects" />
-        <img className={styles.icon__search} src="/svgs/Search.svg" alt="Search" />
+        <input
+          type="text"
+          placeholder="Search for projects"
+          suppressHydrationWarning={true}
+        />
+        <img
+          className={styles.icon__search}
+          src="/svgs/Search.svg"
+          alt="Search"
+        />
       </div>
       <div className={styles.divide}>
         <div className="cart">

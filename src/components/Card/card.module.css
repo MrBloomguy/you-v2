@@ -6,6 +6,7 @@
   justify-content: space-between;
   background: var(--third-color);
   box-shadow: 0px 4px 11px 0px #7e7ce93d;
+  margin: 8px 4px 18px 8px;
 }
 .row__one {
   display: flex;
@@ -63,4 +64,43 @@
 .row__three {
   display: flex;
   gap: 23px;
+}
+.bar__Cont {
+}
+.bar__Cont .divide {
+  display: grid;
+  grid-template-columns: 50px 410px 26px;
+  column-gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.barShadow {
+  width: 409px;
+  height: 6px;
+  background-color: #d9d9d9;
+  border-radius: 4px;
+  position: relative;
+}
+.bar__Cont .barShadow::after {
+  content: "";
+  position: absolute;
+  width: 93%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: var(--fourth-color);
+}
+.bar__Cont h6 {
+  opacity: 50%;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 12px;
+}
+.last_Row {
+  display: flex;
+  gap: 16px;
+}
+.statistics {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

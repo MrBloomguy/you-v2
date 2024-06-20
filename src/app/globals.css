@@ -4,6 +4,7 @@
   --third-color: #f3f6fb;
   --fourth-color: #7b78ff;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -39,4 +40,23 @@ img {
 input {
   border: none;
   outline: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(217, 217, 217, 0.2);
+  width: 5px;
+  height: 583px;
+  border-radius: 4px;
+  opacity: 0.2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  width: 5px;
+  height: 68px;
+
+  border-radius: 4px;
 }
