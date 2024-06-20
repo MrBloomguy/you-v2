@@ -63,7 +63,7 @@ function Aside() {
       <div className={styles.divide}>
         <img
           style={{ width: "185px", height: "50px", margin: " 0 auto" }}
-          src="/svgs/logo.svg"
+          src="/svgs/Logo.svg"
           alt=""
         />
         <ul>
