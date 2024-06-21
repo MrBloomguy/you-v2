@@ -103,7 +103,7 @@
 .last__Row .left {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 .last__Row .left p {
   /* font-family: Poppins; */
@@ -112,4 +112,15 @@
 }
 .last__Row .left button {
   height: 40px !important;
+}
+.last__Row input {
+  width: 213px;
+  padding: 12px;
+  border-radius: 4px;
+}
+.last__Row input::placeholder,
+.last__Row input {
+  color: #949aaf;
+  font-size: 14px;
+  font-weight: 400;
 }

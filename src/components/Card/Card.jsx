@@ -1,7 +1,8 @@
 import React from "react";
 import Button from "../Button/Button";
 import styles from "./card.module.css";
-function Card({ image, title, subTitle, description, bars }) {
+import Link from "next/link";
+function Card({ image, title, subTitle, description, bars ,id }) {
   return (
     <div className={styles.card__cont}>
       <div className={styles.row__one}>
@@ -11,10 +12,10 @@ function Card({ image, title, subTitle, description, bars }) {
         </div>
         <div className={styles.right__cont}>
           <p>12 March 2050</p>
-          <button>
-            Grant $400
+          <Link href={`/rewards/${id}`}>
+            <span >Grant</span> $400
             <span>(20%)</span>
-          </button>
+          </Link>
         </div>
       </div>
       <div className={styles.row__two}>

@@ -7,7 +7,7 @@ import ProjeectCard from "@/components/projectCard/ProjeectCard";
 import ProjectsData from "./ProjectsData";
 function page() {
   const [active, setActive] = useState(false);
-
+  const [value, setValue] = useState("All");
   return (
     <div>
       <Banner
@@ -18,24 +18,50 @@ function page() {
         <h2>Trending Buidls</h2>
         <div className={styles.process_cont}>
           <div className={styles.filter__btn__cont}>
-            <button onClick={() => setActive(!active)}>
+            <button onClick={() => setActive(!active)} defaultValue={value}>
               <span>
                 <img src="/svgs/proj/Filter.svg" alt="" />
               </span>
-              All <img src="/svgs/Arrow.svg" />
+              {value} <img src="/svgs/Arrow.svg" />
             </button>
             <div
               className={`${styles.dropdown} ${active ? styles.active : ""}`}
             >
               <ul>
                 <li>
-                  <Link href="#">1</Link>
+                  <p
+                    // href="#"
+
+                    onClick={(e) => {
+                      setValue("1");
+                      setActive(!active);
+                      console.log(e.target);
+                    }}
+                  >
+                    1
+                  </p>
                 </li>
                 <li>
-                  <Link href="#">2</Link>
+                  <p
+                    onClick={(e) => {
+                      setValue("2");
+                      setActive(!active);
+                      console.log(e.target);
+                    }}
+                  >
+                    2
+                  </p>
                 </li>
                 <li>
-                  <Link href="#">3</Link>
+                  <p
+                    onClick={(e) => {
+                      setValue("3");
+                      setActive(!active);
+                      console.log(e.target);
+                    }}
+                  >
+                    3
+                  </p>
                 </li>
               </ul>
             </div>

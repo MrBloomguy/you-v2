@@ -7,7 +7,7 @@ function Button({ text, type, path }) {
       <Link
         className={styles.btn}
         href={path}
-        style={{ height: "40px", padding: "10px 32px" }}
+        style={{ height: "40px", padding: "10px 26px" }}
       >
         {text}
       </Link>

@@ -3,6 +3,8 @@ import styles from "./Project.module.css";
 // import Button from "../Button/Button";
 import Link from "next/link";
 import Button from "../Button/Button";
+import DropDown from "../Dropdown/DropDown";
+import SocialIcon from "../Socialicon/SocialIcon";
 function ProjeectCard({ image, num, id, red, height, imageHight }) {
   return (
     <div
@@ -101,7 +103,18 @@ function ProjeectCard({ image, num, id, red, height, imageHight }) {
           </div>
         </div>
       ) : (
-        <div className={styles.last__Row}></div>
+        <div className={styles.last__Row}>
+          <SocialIcon />
+          <div style={{ display: "flex", gap: "8px" }}>
+            <input type="text" placeholder="Enter Ammount" />
+            {/**DropDown * */}
+            <DropDown />
+          </div>
+          <div className={styles.left}>
+            <img src="/svgs/proj/Cartcard.svg" alt="" />
+            <Button path={`/projects/${id}`} type="link" text="Contribute" />
+          </div>
+        </div>
       )}
     </div>
   );

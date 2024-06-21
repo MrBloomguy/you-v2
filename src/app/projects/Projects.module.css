@@ -26,6 +26,7 @@
 }
 .filter__btn__cont {
   position: relative;
+  z-index: 99;
 }
 .dropdown {
   background-color: #ebe9e9;
@@ -34,6 +35,9 @@
   display: none;
   position: absolute;
   width: 100%;
+}
+.dropdown ul li p {
+  cursor: pointer;
 }
 .divide {
   display: grid;

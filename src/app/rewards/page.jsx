@@ -7,6 +7,7 @@ import Voting from "@/components/Voting/Voting";
 function page() {
   const cardData = [
     {
+      id: 1,
       image: "/profile.jpeg",
       title: "GAMION",
       subTitle: "Milestone Description:",
@@ -111,6 +112,7 @@ function page() {
               subTitle={item.subTitle}
               description={item.description}
               bars={item.bars}
+              id={item.id}
             />
           ))}
         </div>
