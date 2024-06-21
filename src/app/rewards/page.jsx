@@ -16,6 +16,7 @@ function page() {
       bars: false,
     },
     {
+      id: 2,
       image: "/ava2.jpg",
       title: "GAMION",
       subTitle: "Milestone Description:",
@@ -24,6 +25,7 @@ function page() {
       bars: true,
     },
     {
+      id: 3,
       image: "/profile.jpeg",
       title: "GAMION",
       subTitle: "Milestone Description:",
@@ -32,6 +34,7 @@ function page() {
       bars: false,
     },
     {
+      id: 4,
       image: "/ava2.jpg",
       title: "GAMION",
       subTitle: "Milestone Description:",
@@ -40,6 +43,7 @@ function page() {
       bars: true,
     },
     {
+      id: 5,
       image: "/profile.jpeg",
       title: "GAMION",
       subTitle: "Milestone Description:",
@@ -48,6 +52,7 @@ function page() {
       bars: false,
     },
     {
+      id: 6,
       image: "/ava2.jpg",
       title: "GAMION",
       subTitle: "Milestone Description:",
@@ -56,6 +61,7 @@ function page() {
       bars: true,
     },
     {
+      id: 7,
       image: "/profile.jpeg",
       title: "GAMION",
       subTitle: "Milestone Description:",
@@ -64,6 +70,7 @@ function page() {
       bars: false,
     },
     {
+      id: 8,
       image: "/ava2.jpg",
       title: "GAMION",
       subTitle: "Milestone Description:",
@@ -72,6 +79,7 @@ function page() {
       bars: true,
     },
     {
+      id: 9,
       image: "/profile.jpeg",
       title: "GAMION",
       subTitle: "Milestone Description:",
@@ -80,6 +88,7 @@ function page() {
       bars: false,
     },
     {
+      id: 10,
       image: "/ava2.jpg",
       title: "GAMION",
       subTitle: "Milestone Description:",
@@ -88,6 +97,16 @@ function page() {
       bars: true,
     },
     {
+      id: 11,
+      image: "/profile.jpeg",
+      title: "GAMION",
+      subTitle: "Milestone Description:",
+      description:
+        "Defi Promises to Revolutionize how People engage in economic activities. in the web 3 space.",
+      bars: false,
+    },
+    {
+      id: 12,
       image: "/profile.jpeg",
       title: "GAMION",
       subTitle: "Milestone Description:",
