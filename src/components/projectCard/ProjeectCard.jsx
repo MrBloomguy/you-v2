@@ -112,7 +112,7 @@ function ProjeectCard({ image, num, id, red, height, imageHight }) {
           </div>
           <div className={styles.left}>
             <img src="/svgs/proj/Cartcard.svg" alt="" />
-            <Button path={`/projects/${id}`} type="link" text="Contribute" />
+            <Button path="#" type="link" text="Contribute" />
           </div>
         </div>
       )}
