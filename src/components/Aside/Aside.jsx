@@ -67,7 +67,7 @@ function Aside() {
     {
       name: "Vote",
       path: "/vote",
-      icon: <DocsSvg />,
+      icon:"",
     },
   ];
   return (
