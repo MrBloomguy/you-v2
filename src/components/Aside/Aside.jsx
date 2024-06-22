@@ -12,10 +12,17 @@ import MintDomain from "../../../public/svgs/MintDomain";
 import DonationSvg from "../../../public/svgs/DonationSvg";
 import DocsSvg from "../../../public/svgs/DocsSvg";
 import LogoutSvg from "../../../public/svgs/LogoutSvg";
+import DoubleButton from "./DoubleButton";
 function Aside() {
   const pathName = usePathname();
 
-  console.log(pathName);
+  let show1;
+  pathName === "/rewards" ? (show1 = false) : "";
+  pathName === "/projects" ? (show1 = true) : "";
+  let show2 =
+    +pathName.split("/").slice(-1) % 2 === 0 && pathName.includes("/rewards");
+  console.log(show1, show2, pathName);
+
   const Links = [
     {
       name: "Home",
@@ -67,17 +74,27 @@ function Aside() {
           alt=""
         />
         <ul>
-          {Links.map((item, index) => (
-            <li
-              key={index}
-              className={item.path === pathName ? styles.active : "a"}
-            >
-              <Link href={`${item.path}`}>
-                <span className={styles.icon}> {item.icon}</span>
-                {item.name}
-              </Link>
+          {Links.map((item, index) => {
+            const isActive =
+              item.path === "/"
+                ? pathName === "/"
+                : pathName.includes(item.path.substring(1)) &&
+                  item.path.length !== 1;
+
+            return (
+              <li key={index} className={isActive ? styles.active : ""}>
+                <Link href={`${item.path}`}>
+                  <span className={styles.icon}> {item.icon}</span>
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
+          {(show1 || show2) && (
+            <li>
+              <DoubleButton />
             </li>
-          ))}
+          )}
         </ul>
       </div>
       <div>
