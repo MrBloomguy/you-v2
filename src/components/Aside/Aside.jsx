@@ -17,7 +17,7 @@ function Aside() {
   const pathName = usePathname();
 
   let show1;
-  pathName === "/rewards" ? (show1 = false) : "";
+  pathName === "/rewards" ? (show1 = true) : "";
   pathName === "/projects" ? (show1 = true) : "";
   let show2 =
     +pathName.split("/").slice(-1) % 2 === 0 && pathName.includes("/rewards");

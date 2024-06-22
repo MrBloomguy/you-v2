@@ -45,6 +45,7 @@ linear-gradient(0deg, rgba(1, 54, 71, 0.54), rgba(1, 54, 71, 0.54));
             color="var(--fivth-color)"
             type="link"
             path="#"
+            // path="rewards/claim"
           />
         </div>
       )}
@@ -76,7 +77,7 @@ linear-gradient(0deg, rgba(1, 54, 71, 0.54), rgba(1, 54, 71, 0.54));
                 text="Claim Now"
                 color="var(--fivth-color)"
                 type="link"
-                path="#"
+                path="rewards/claim"
               />
             </>
           </div>
