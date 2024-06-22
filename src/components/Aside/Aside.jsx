@@ -64,6 +64,11 @@ function Aside() {
       path: "/docs",
       icon: <DocsSvg />,
     },
+    {
+      name: "Vote",
+      path: "/vote",
+      icon: "",
+    },
   ];
   return (
     <aside className={styles.aside__cont}>
