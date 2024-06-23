@@ -5,4 +5,3 @@ function page() {
 }
 
 export default page;
-/**m ddskjc */
