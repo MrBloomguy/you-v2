@@ -26,7 +26,7 @@ function page() {
   // const [step, setStep] = useState(0);
   const handleNext = () => {
     console.log(stateRecived);
-    setStateStep((prevStep) => prevStep + 1);
+    setStateStep((prevStep) => (prevStep <= 1 ? prevStep + 1 : 0));
   };
   return (
     <div>
