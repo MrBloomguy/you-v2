@@ -1,5 +1,5 @@
 .dragOver {
-  background-color: var(--fourth-color);
+  background-color: var(--fourth-color) !important;
 }
 .form_Cont {
   width: 547px;

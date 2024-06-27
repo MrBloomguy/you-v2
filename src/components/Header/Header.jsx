@@ -20,7 +20,7 @@ function Header() {
         />
       </div>
       <div className={styles.divide}>
-        <div className="cart">
+        <div className={stateStep > 0 ? styles.cart : ""}>
           <img src="/svgs/Cart.svg" alt="Cart" />
         </div>
         {stateStep === 0 ? (
@@ -34,7 +34,13 @@ function Header() {
             </div>
           </>
         ) : (
-          <>Alaa Ayaad</>
+          <p className={styles.buttonGroup}>
+            <p className={styles.leftBtn}>
+              <img src="./svgs/qf/Star.svg" alt="star" />
+              Star
+            </p>
+            <p className={styles.rightBtn}>1000</p>
+          </p>
         )}
         <div className="wallet">
           <Button text="Connect Wallet" />

@@ -5,6 +5,8 @@ import React, { useContext } from "react";
 
 import { sharedState } from "../layout";
 import FormFirstStep from "@/components/qrForms/FormFirstStep";
+import FormSecondStep from "@/components/qrForms/FormSecondStep";
+import FormThirdStep from "@/components/qrForms/FormThirdStep";
 
 function page() {
   const styleBtn = {
@@ -38,32 +40,8 @@ function page() {
       />
       <Steps step={stateStep} />
       {stateStep === 0 && <FormFirstStep />}
-      {stateStep === 1 && (
-        <h2
-          style={{
-            textAlign: "center",
-            marginTop: "30px",
-            fontSize: "2rem",
-            fontStyle: "italic",
-            color: "#ddd",
-          }}
-        >
-          Step 2
-        </h2>
-      )}
-      {stateStep === 2 && (
-        <h2
-          style={{
-            textAlign: "center",
-            marginTop: "30px",
-            fontSize: "2rem",
-            fontStyle: "italic",
-            color: "#ddd",
-          }}
-        >
-          Step3
-        </h2>
-      )}
+      {stateStep === 1 && <FormSecondStep />}
+      {stateStep === 2 && <FormThirdStep />}
       <button style={styleBtn} onClick={handleNext}>
         {stateStep === 2 ? "Submit" : "Next"}
       </button>

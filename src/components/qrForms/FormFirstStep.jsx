@@ -1,18 +1,18 @@
 import React, { useRef } from "react";
 import styles from "./common.module.css";
 function FormFirstStep() {
-  const dragZone = useRef("");
+  const dragZone = useRef(null);
   function handleDragOver(e) {
     e.preventDefault();
-    dragZone.current.classList.add(styles.dargOver);
+    dragZone.current.classList.add(styles.dragOver);
   }
   function handleDragLeave(e) {
     e.preventDefault();
-    dragZone.current.classList.remove(styles.dargOver);
+    dragZone.current.classList.remove(styles.dragOver);
   }
   function handleDrop(e) {
     e.preventDefault();
-    dragZone.current.classList.remove(styles.dargOver);
+    dragZone.current.classList.remove(styles.dragOver);
     const file = e.dataTransfer.files;
   }
   return (
