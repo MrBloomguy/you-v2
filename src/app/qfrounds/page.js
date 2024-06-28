@@ -1,12 +1,14 @@
 "use client";
 import Banner from "@/components/Banner/Banner";
 import Steps from "@/components/steps/Steps";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { sharedState } from "../layout";
 import FormFirstStep from "@/components/qrForms/FormFirstStep";
 import FormSecondStep from "@/components/qrForms/FormSecondStep";
 import FormThirdStep from "@/components/qrForms/FormThirdStep";
+import Loader from "@/components/Loader/Loader";
+import SuccessCard from "@/components/SuccessCard/SuccessCard";
 
 function page() {
   const styleBtn = {
@@ -25,10 +27,17 @@ function page() {
   };
   const stateRecived = useContext(sharedState);
   const { stateStep, setStateStep } = stateRecived;
-  // const [step, setStep] = useState(0);
+  useEffect(() => {
+    if (stateStep === 3) {
+      setTimeout(() => {
+        setStateStep(4);
+      }, 1000);
+      // return () => clearTimeout(timer);
+    }
+  }, [stateStep]);
   const handleNext = () => {
     console.log(stateRecived);
-    setStateStep((prevStep) => (prevStep <= 1 ? prevStep + 1 : 0));
+    setStateStep((prevStep) => (prevStep <= 1 ? prevStep + 1 : 3));
   };
   return (
     <div>
@@ -42,6 +51,8 @@ function page() {
       {stateStep === 0 && <FormFirstStep />}
       {stateStep === 1 && <FormSecondStep />}
       {stateStep === 2 && <FormThirdStep />}
+      {stateStep === 3 && <Loader />}
+      {stateStep === 4 && <SuccessCard />}
       <button style={styleBtn} onClick={handleNext}>
         {stateStep === 2 ? "Submit" : "Next"}
       </button>
