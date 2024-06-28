@@ -1,13 +1,23 @@
 "use client";
 import Banner from "@/components/Banner/Banner";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Projects.module.css";
 import Link from "next/link";
 import ProjeectCard from "@/components/projectCard/ProjeectCard";
 import ProjectsData from "./ProjectsData";
+import { getProjects } from "@/utils";
 function page() {
+  const [projects, setProjects] = useState([]);
   const [active, setActive] = useState(false);
   const [value, setValue] = useState("All");
+
+  useEffect(() => {
+    const loadProjects = async () => {
+      const projectsData = await getProjects();
+      setProjects(projectsData);
+    };
+    loadProjects();
+  }, []);
   return (
     <div>
       <Banner
@@ -75,12 +85,10 @@ function page() {
         </div>
       </div>
       <div className={styles.divide}>
-        {ProjectsData.map((item, index) => (
+        {projects.map((item, index) => (
           <ProjeectCard
-            image={item.image}
+            project={item}
             key={index}
-            red={item.red}
-            id={item.id}
           />
         ))}
       </div>

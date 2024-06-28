@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 import Button from "../Button/Button";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 function Header() {
   return (
     <header className={styles.header__cont}>
@@ -28,7 +29,7 @@ function Header() {
           <img src="/svgs/Arrow.svg" alt="arrow" />
         </div>
         <div className="wallet">
-          <Button text="Connect Wallet" />
+          <ConnectButton/>
         </div>
       </div>
     </header>

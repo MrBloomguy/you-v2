@@ -1,16 +1,14 @@
-import { getDefaultConfig, createAuthenticationAdapter, RainbowKitAuthenticationProvider, RainbowKitProvider } from "@rainbow-me/rainbowkit";
-import { WagmiProvider, http } from "wagmi";
+
 
 import "@rainbow-me/rainbowkit/styles.css";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import Aside from "@/components/Aside/Aside";
 import Header from "@/components/Header/Header";
 import { Inter } from "next/font/google";
 
-
-
 import "./globals.css";
+import Providers from "./provider";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,8 +24,10 @@ export default function RootLayout({ children }) {
         <div className="main__Wrapper">
           <Aside />
           <main>
-            <Header />
-            {children}
+            <Providers>
+              <Header />
+              {children}
+            </Providers>
           </main>
         </div>
       </body>

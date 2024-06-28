@@ -20,12 +20,8 @@
   right: 10px;
   top: 12px;
   position: absolute;
-  background: #0f1222;
-  width: 56px;
+  color: white;
   display: flex;
-  align-items: center;
-  height: 22px;
-  border-radius: 4px;
   justify-content: center;
 }
 .project_Card_cont .first__Row {
