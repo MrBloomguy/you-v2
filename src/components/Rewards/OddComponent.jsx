@@ -13,9 +13,9 @@ function OddComponent() {
         image="/svgs/RewardBanner.svg"
       />
       <div className={styles.view_cont}>
-        <ViewCard title="Buildpoints" id="1" />
-        <ViewCard description1="1" title="Contribution Rewards" id="2" />
-        <ViewCard description2="2" title="Referrals" id="3" />
+        <ViewCard title="Buildpoints" id={1} />
+        <ViewCard title="Contribution Rewards" id={2} />
+        <ViewCard title="Referrals" id={3} />
       </div>
       <div className={styles.last_Cont}>
         <Button

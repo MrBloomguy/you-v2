@@ -18,13 +18,13 @@ linear-gradient(0deg, rgba(1, 54, 71, 0.54), rgba(1, 54, 71, 0.54));
     >
       <div>
         <h3>{title}</h3>
-        {description1 && (
+        {id == 2 && (
           <p className={styles.description}>
             You have received <span>USDT 2</span> reward for funding 10
             projects.
           </p>
         )}
-        {description2 && (
+        {id == 3 && (
           <>
             <p className={styles.description}>
               You have referred<span> 200</span> contributors.
@@ -38,7 +38,7 @@ linear-gradient(0deg, rgba(1, 54, 71, 0.54), rgba(1, 54, 71, 0.54));
         )}
       </div>
       <img src="/svgs/Jewellery.svg" alt="" className={styles.jullery} />
-      {id === "1" && (
+      {id == 1 && (
         <div className={styles.last_Row} style={{ justifyContent: "flex-end" }}>
           <Button
             text="Claim Now"
@@ -50,7 +50,7 @@ linear-gradient(0deg, rgba(1, 54, 71, 0.54), rgba(1, 54, 71, 0.54));
         </div>
       )}
       {/****Second Card if id=2 return last Row with his Style***/}
-      {id === "2" && (
+      {id == 2 && (
         <div className={styles.last_Row}>
           <div>
             <div
@@ -84,7 +84,7 @@ linear-gradient(0deg, rgba(1, 54, 71, 0.54), rgba(1, 54, 71, 0.54));
         </div>
       )}
       {/****Last Card if id=3 return last Row with his Style***/}
-      {id === "3" && (
+      {id == 3 && (
         <div
           className={styles.last_Row}
           style={{ justifyContent: "flex-end", gap: "16px" }}
