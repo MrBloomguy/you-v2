@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import styles from "./Header.module.css";
+import Button from "../Button/Button";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { sharedState } from "@/app/layout";
 function Header() {
   const stateRecived = useContext(sharedState);
   const { stateStep } = stateRecived;
@@ -42,7 +44,7 @@ function Header() {
           </p>
         )}
         <div className="wallet">
-          <ConnectButton/>
+          <ConnectButton />
         </div>
       </div>
     </header>
