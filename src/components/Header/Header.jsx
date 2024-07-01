@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Header.module.css";
-import Button from "../Button/Button";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 function Header() {
+  const stateRecived = useContext(sharedState);
+  const { stateStep } = stateRecived;
   return (
     <header className={styles.header__cont}>
       <div className={styles.input__cont}>
@@ -18,16 +19,28 @@ function Header() {
         />
       </div>
       <div className={styles.divide}>
-        <div className="cart">
+        <div className={stateStep > 0 ? styles.cart : ""}>
           <img src="/svgs/Cart.svg" alt="Cart" />
         </div>
-        <div className="Notification">
-          <img src="/svgs/Notifications.svg" alt="notifications" />
-        </div>
-        <div className="flex">
-          <img className={styles.avatar} src="/profile.jpeg" alt="user" />
-          <img src="/svgs/Arrow.svg" alt="arrow" />
-        </div>
+        {stateStep === 0 ? (
+          <>
+            <div className="Notification">
+              <img src="/svgs/Notifications.svg" alt="notifications" />
+            </div>
+            <div className="flex">
+              <img className={styles.avatar} src="/profile.jpeg" alt="user" />
+              <img src="/svgs/Arrow.svg" alt="arrow" />
+            </div>
+          </>
+        ) : (
+          <p className={styles.buttonGroup}>
+            <p className={styles.leftBtn}>
+              <img src="./svgs/qf/Star.svg" alt="star" />
+              Star
+            </p>
+            <p className={styles.rightBtn}>1000</p>
+          </p>
+        )}
         <div className="wallet">
           <ConnectButton/>
         </div>

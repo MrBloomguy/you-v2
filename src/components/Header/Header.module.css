@@ -50,3 +50,30 @@
   border: 1px solid #dbe1e8; /* Adds border after the gap */
   height: 34px;
 }
+.cart::after {
+  content: none;
+  border: none !important;
+}
+.buttonGroup {
+  display: flex;
+}
+.buttonGroup p {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.8em 1.3em 0.8em 1.3em;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 113px;
+}
+.buttonGroup .leftBtn {
+  border-radius: 8px 0 0px 8px;
+  border: 1px solid;
+}
+.buttonGroup .rightBtn {
+  background-color: var(--third-color);
+  border-radius: 0 8px 8px 0;
+  justify-content: center;
+}

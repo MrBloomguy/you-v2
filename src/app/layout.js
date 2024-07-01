@@ -5,7 +5,7 @@ import "@rainbow-me/rainbowkit/styles.css";
 import Aside from "@/components/Aside/Aside";
 import Header from "@/components/Header/Header";
 import { Inter } from "next/font/google";
-
+import { useState } from "react";
 import "./globals.css";
 import Providers from "./provider";
 
@@ -18,6 +18,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const [stateStep, setStateStep] = useState(0);
   return (
     <html lang="en" >
       <body className={inter.className} suppressHydrationWarning={true}>
