@@ -32,7 +32,6 @@ export default function HomePage() {
       setTimeout(() => {
         setStateStep(4);
       }, 1000);
-      // return () => clearTimeout(timer);
     }
   }, [stateStep]);
   const handleNext = () => {
